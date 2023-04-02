@@ -10,7 +10,7 @@ function initGalleryScript() {
   const scriptCDN = document.createElement('script');
   scriptCDN.src =
     'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js';
-  document.body.append(scriptCDN);
+  document.body.appendChild(scriptCDN);
   document.head.insertAdjacentHTML(
     'beforeend',
     '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">'
