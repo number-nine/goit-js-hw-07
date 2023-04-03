@@ -1,21 +1,21 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-initGalleryScript();
+// initGalleryScript();
 const galleryContainer = document.querySelector('.gallery');
 createGalleryMarkup(galleryItems, galleryContainer);
 galleryContainer.addEventListener('click', onGalleryClick);
 
-function initGalleryScript() {
-  const scriptCDN = document.createElement('script');
-  scriptCDN.src =
-    'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js';
-  document.body.appendChild(scriptCDN);
-  document.head.insertAdjacentHTML(
-    'beforeend',
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">'
-  );
-}
+// function initGalleryScript() {
+//   const scriptCDN = document.createElement('script');
+//   scriptCDN.src =
+//     'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js';
+//   document.body.appendChild(scriptCDN);
+//   document.head.insertAdjacentHTML(
+//     'beforeend',
+//     '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">'
+//   );
+// }
 
 function onGalleryClick(evt) {
   const controller = new AbortController();
