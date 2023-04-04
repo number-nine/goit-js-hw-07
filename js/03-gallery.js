@@ -2,9 +2,6 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 let myLightbox;
-
-
-
 const galleryContainer = document.querySelector('.gallery');
 createGalleryMarkup(galleryItems, galleryContainer);
 galleryContainer.addEventListener('click', onGalleryClick);
@@ -17,22 +14,21 @@ function onGalleryClick(evt) {
   if (!currentElement.classList.contains('gallery__image')) {
     return;
   }
-  currentElement.tab
- myLightbox = basicLightbox
-    .create(
-      composeFullscreenImgElement(
-        currentElement.dataset.source,
-        currentElement.alt
-      ),
-      {
-        onShow: () => {
-          window.addEventListener('keydown', onEscPress);
-        },
-        onClose: () => {
-          window.removeEventListener('keydown', onEscPress);
-        },
-      }
-    )
+  currentElement.tab;
+  myLightbox = basicLightbox.create(
+    composeFullscreenImgElement(
+      currentElement.dataset.source,
+      currentElement.alt
+    ),
+    {
+      onShow: () => {
+        window.addEventListener('keydown', onEscPress);
+      },
+      onClose: () => {
+        window.removeEventListener('keydown', onEscPress);
+      },
+    }
+  );
   myLightbox.show();
 }
 
@@ -43,7 +39,6 @@ function onEscPress(event) {
   }
   myLightbox.close();
 }
-
 
 function createGalleryMarkup(galleryItems, galleryContainer) {
   const galleryContent = galleryItems
